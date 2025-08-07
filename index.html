@@ -1,0 +1,265 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Song Key & Tempo Analyzer & Mixer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="app-header">
+        <div class="header-content">
+          <div class="logo">
+            <i class="fas fa-music"></i>
+            <h1>Song Key & Tempo Analyzer</h1>
+          </div>
+          <p>
+            Drop your audio files to analyze key & BPM for perfect harmonic
+            mixing
+          </p>
+        </div>
+      </header>
+
+      <div class="main-content">
+        <div class="upload-section">
+          <div class="upload-tabs">
+            <button class="tab-btn active" id="fileUploadTab">
+              <i class="fas fa-upload"></i>
+              File Upload
+            </button>
+            <button class="tab-btn" id="manualEntryTab">
+              <i class="fas fa-keyboard"></i>
+              Manual Entry
+            </button>
+            <button class="tab-btn" id="importTab">
+              <i class="fas fa-file-import"></i>
+              Import Songs
+            </button>
+          </div>
+
+          <div class="tab-content active" id="fileUploadContent">
+            <div class="drop-zone" id="dropZone">
+              <div class="drop-zone-content">
+                <i class="fas fa-cloud-upload-alt upload-icon" id="upload-icon"></i>
+                <span style="display: none;" id="loader"></span>
+                <h3>Drop audio files here</h3>
+                <p>Or click to select files</p>
+                <input
+                  type="file"
+                  id="fileInput"
+                  multiple
+                  accept="audio/*"
+                  hidden
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="manualEntryContent">
+            <div class="manual-entry-form">
+              <div class="form-header">
+                <i class="fas fa-plus-circle"></i>
+                <h3>Add Song Manually</h3>
+              </div>
+              <form id="manualSongForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="songTitle">
+                      <i class="fas fa-music"></i>
+                      Song Title
+                    </label>
+                    <input type="text" id="songTitle" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="songArtist">
+                      <i class="fas fa-user"></i>
+                      Artist
+                    </label>
+                    <input type="text" id="songArtist" required />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="songKey">
+                      <i class="fas fa-key"></i>
+                      Select Key
+                    </label>
+                    <select id="songKey" required>
+                      <option value="">Choose a key...</option>
+                      <option value="1A">1A - Ab minor</option>
+                      <option value="1B">1B - B major</option>
+                      <option value="2A">2A - Eb minor</option>
+                      <option value="2B">2B - Gb major</option>
+                      <option value="3A">3A - Bb minor</option>
+                      <option value="3B">3B - Db major</option>
+                      <option value="4A">4A - F minor</option>
+                      <option value="4B">4B - Ab major</option>
+                      <option value="5A">5A - C minor</option>
+                      <option value="5B">5B - Eb major</option>
+                      <option value="6A">6A - G minor</option>
+                      <option value="6B">6B - Bb major</option>
+                      <option value="7A">7A - D minor</option>
+                      <option value="7B">7B - F major</option>
+                      <option value="8A">8A - A minor</option>
+                      <option value="8B">8B - C major</option>
+                      <option value="9A">9A - E minor</option>
+                      <option value="9B">9B - G major</option>
+                      <option value="10A">10A - B minor</option>
+                      <option value="10B">10B - D major</option>
+                      <option value="11A">11A - Gb minor</option>
+                      <option value="11B">11B - A major</option>
+                      <option value="12A">12A - Db minor</option>
+                      <option value="12B">12B - E major</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="songBpm">
+                      <i class="fas fa-heartbeat"></i>
+                      BPM
+                    </label>
+                    <input
+                      type="number"
+                      id="songBpm"
+                      min="60"
+                      max="200"
+                      required
+                    />
+                  </div>
+                </div>
+                <button type="submit" class="add-song-btn">
+                  <i class="fas fa-plus"></i>
+                  Add Song
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="tab-content" id="importContent">
+            <div class="import-section">
+              <div class="import-header">
+                <i class="fas fa-file-import"></i>
+                <h3>Import Song List</h3>
+                <p>Upload a previously exported song list JSON file</p>
+              </div>
+              <div class="import-zone" id="importZone">
+                <div class="import-zone-content">
+                  <i class="fas fa-file-code"></i>
+                  <h4>Drop JSON file here</h4>
+                  <p>Or click to select file</p>
+                  <input type="file" id="importInput" accept=".json" hidden />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="processing-status" id="processingStatus"></div>
+        </div>
+
+        <div class="analyzer-section">
+          <div class="camelot-wheel-container">
+            <div class="wheel-header">
+              <div class="wheel-title">
+                <i class="fas fa-circle-notch"></i>
+                <h2>Camelot Wheel</h2>
+              </div>
+              <div class="legend">
+                <span class="legend-item perfect">
+                  <i class="fas fa-check-circle"></i>
+                  Perfect Match
+                </span>
+                <span class="legend-item energy-boost">
+                  <i class="fas fa-arrow-up"></i>
+                  Energy Boost
+                </span>
+                <span class="legend-item energy-drop">
+                  <i class="fas fa-arrow-down"></i>
+                  Energy Drop
+                </span>
+                <span class="legend-item mood-change">
+                  <i class="fas fa-exchange-alt"></i>
+                  Mood Change
+                </span>
+              </div>
+            </div>
+            <div class="camelot-wheel" id="camelotWheel">
+              <!-- Wheel will be generated by JavaScript -->
+            </div>
+          </div>
+
+          <div class="songs-panel">
+            <div class="songs-header">
+              <div class="songs-title">
+                <i class="fas fa-list"></i>
+                <h3>Analyzed Songs</h3>
+              </div>
+              <div class="songs-actions">
+                <div class="auto-mix-toggle" title="Auto mix and export JSON">
+                  <input
+                    type="checkbox"
+                    id="autoMixToggle"
+                    class="toggle-checkbox"
+                  />
+                  <label for="autoMixToggle" class="toggle-label">
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+                <button class="export-songs-btn" id="exportSongsBtn" disabled>
+                  <i class="fas fa-download"></i>
+                  Export Songs
+                </button>
+                <button class="create-mix-btn" id="createMixBtn" disabled>
+                  <i class="fas fa-magic"></i>
+                  Create Mix
+                </button>
+              </div>
+            </div>
+            <div class="songs-list" id="songsList">
+              <div class="empty-state">
+                <i class="fas fa-music"></i>
+                <p>
+                  No songs analyzed yet. Drop some audio files to get started!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mix-section" id="mixSection" style="display: none">
+          <div class="mix-header">
+            <div class="mix-title">
+              <i class="fas fa-headphones"></i>
+              <h3>Optimal Mix Sequence</h3>
+            </div>
+            <div class="mix-controls">
+              <button class="export-btn" id="exportBtn">
+                <i class="fas fa-file-export"></i>
+                Export Mix List
+              </button>
+              <button class="export-json-btn" id="exportJsonBtn">
+                <i class="fas fa-code"></i>
+                Export JSON
+              </button>
+              <button class="reset-btn" id="resetBtn">
+                <i class="fas fa-redo"></i>
+                Reset
+              </button>
+            </div>
+          </div>
+          <div class="mix-timeline" id="mixTimeline">
+            <!-- Mix sequence will be displayed here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

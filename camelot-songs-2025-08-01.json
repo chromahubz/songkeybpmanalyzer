@@ -1,0 +1,79 @@
+{
+  "songs": [
+    {
+      "name": "Michael Jackson - Billie Jean (Official Video)",
+      "bpm": 117,
+      "key": "Gb minor",
+      "camelotKey": "11A",
+      "energy": 0.2085088884852982,
+      "duration": 295.8454375,
+      "isManual": false,
+      "exportedAt": "2025-08-01T11:30:24.186Z"
+    },
+    {
+      "name": "Beethoven - Für Elise",
+      "bpm": 82,
+      "key": "A minor",
+      "camelotKey": "8A",
+      "energy": 0.0589319263790777,
+      "duration": 175.00879166666667,
+      "isManual": false,
+      "exportedAt": "2025-08-01T11:30:24.187Z"
+    },
+    {
+      "name": "David Guetta - Titanium ft. Sia (Official Video)",
+      "bpm": 126,
+      "key": "C minor",
+      "camelotKey": "5A",
+      "energy": 0.3016359701240225,
+      "duration": 245.24914583333333,
+      "isManual": false,
+      "exportedAt": "2025-08-01T11:30:24.187Z"
+    },
+    {
+      "name": "Ed Sheeran - Shape of You (Official Music Video)",
+      "bpm": 96,
+      "key": "Gb minor",
+      "camelotKey": "11A",
+      "energy": 0.2916267961973485,
+      "duration": 263.22139583333336,
+      "isManual": false,
+      "exportedAt": "2025-08-01T11:30:24.187Z"
+    },
+    {
+      "name": "Eminem - Lose Yourself",
+      "bpm": 85,
+      "key": "D minor",
+      "camelotKey": "7A",
+      "energy": 0.13165370175633448,
+      "duration": 327.471,
+      "isManual": false,
+      "exportedAt": "2025-08-01T11:30:24.187Z"
+    },
+    {
+      "name": "Daft Punk - Get Lucky (Official Audio) ft. Pharrell Williams, Nile Rodgers",
+      "bpm": 116,
+      "key": "B minor",
+      "camelotKey": "10A",
+      "energy": 0.24495047809339493,
+      "duration": 247.89622916666667,
+      "isManual": false,
+      "exportedAt": "2025-08-01T11:30:24.187Z"
+    },
+    {
+      "name": "Nirvana - Smells Like Teen Spirit (Official Music Video)",
+      "bpm": 117,
+      "key": "F minor",
+      "camelotKey": "4A",
+      "energy": 0.24806382179730618,
+      "duration": 278.3375833333333,
+      "isManual": false,
+      "exportedAt": "2025-08-01T11:30:24.187Z"
+    }
+  ],
+  "exportInfo": {
+    "totalSongs": 7,
+    "exportedAt": "2025-08-01T11:30:24.187Z",
+    "version": "1.0"
+  }
+}
