@@ -546,6 +546,10 @@ class CamelotAnalyzer {
       "G# minor": "Ab minor",
       "A# major": "Bb major",
       "C# minor": "Db minor",
+      "F# major": "Gb major",
+      "D# major": "Eb major",
+      "G# major": "Ab major",
+      "A# minor": "Bb minor",
     };
 
     // Detect Key
