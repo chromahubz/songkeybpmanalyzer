@@ -13,7 +13,7 @@
       "destination": "/how-to.html"
     },
     {
-      "source": "/(.*)",
+      "source": "/((?!terms|privacy|how-to|assets).*)",
       "destination": "/index.html"
     }
   ],

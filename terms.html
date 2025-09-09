@@ -1,0 +1,91 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service | Key Of Song</title>
+    <meta name="description" content="Key Of Song Terms of Service." />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="site-header-inner">
+        <a class="brand" href="index.html" aria-label="Key Of Song home">
+          <img src="assets/logo.png" alt="Key Of Song logo" class="brand-logo" />
+          <span>Key Of Song</span>
+        </a>
+        <nav class="top-nav" aria-label="Primary">
+          <a href="index.html#analyze">Analyze</a>
+          <a href="index.html#features">Features</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="how-to.html">How To</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="app-container">
+      <header class="app-header" style="margin-top:16px">
+        <div class="header-content">
+          <div class="logo">
+            <img src="assets/logo.png" alt="Key Of Song logo" class="hero-logo" />
+            <h1>Terms of Service</h1>
+          </div>
+          <p>Welcome to Key Of Song. Please read these terms carefully.</p>
+        </div>
+      </header>
+
+      <section class="seo-content" aria-labelledby="acceptance">
+        <h2 id="acceptance">Acceptance of Terms</h2>
+        <p>By accessing or using Key Of Song (the “Service”), you agree to these Terms of Service (“Terms”). If you do not agree, do not use the Service.</p>
+      </section>
+
+      <section class="seo-content" aria-labelledby="license">
+        <h2 id="license">License and Use</h2>
+        <p>We grant you a personal, non-exclusive, non-transferable, revocable license to use the Service for lawful purposes. You agree not to misuse the Service, disrupt its operation, or reverse-engineer its code.</p>
+      </section>
+
+      <section class="seo-content" aria-labelledby="no-warranty">
+        <h2 id="no-warranty">No Warranty</h2>
+        <p>The Service is provided “as is” without warranties of any kind, express or implied. We do not guarantee uninterrupted or error-free operation or accuracy of results.</p>
+      </section>
+
+      <section class="seo-content" aria-labelledby="liability">
+        <h2 id="liability">Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, Key Of Song and its contributors are not liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Service.</p>
+      </section>
+
+      <section class="seo-content" aria-labelledby="user-content">
+        <h2 id="user-content">User Content</h2>
+        <p>You retain ownership of any content and files you provide. You are solely responsible for ensuring you have rights to the files you analyze.</p>
+      </section>
+
+      <section class="seo-content" aria-labelledby="changes">
+        <h2 id="changes">Changes to Terms</h2>
+        <p>We may update these Terms from time to time. Material changes will be posted on this page with an updated effective date.</p>
+      </section>
+    </div>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="site-footer-inner">
+        <p>© <span id="year"></span> Key Of Song. Built for DJs and music creators.</p>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="index.html#features">Features</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="how-to.html">How To</a>
+          <a href="/terms" aria-current="page">Terms</a>
+          <a href="/privacy">Privacy</a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          var y = new Date().getFullYear();
+          var el = document.getElementById('year');
+          if (el) el.textContent = y;
+        })();
+      </script>
+    </footer>
+  </body>
+  </html>
+
