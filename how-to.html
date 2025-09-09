@@ -1,0 +1,100 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How To Use | Song Key & Tempo Analyzer</title>
+    <meta name="description" content="Step-by-step tutorial: analyze song key and BPM, understand the Harmonic Wheel, and generate optimal mix order for DJs and producers." />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header" role="banner">
+      <div class="site-header-inner">
+        <a class="brand" href="index.html" aria-label="Song Key & Tempo Analyzer home">
+          <img src="assets/logo.png" alt="Song Key Analyzer logo" class="brand-logo" />
+          <span>Song Key Analyzer</span>
+        </a>
+        <nav class="top-nav" aria-label="Primary">
+          <a href="index.html#analyze">Analyze</a>
+          <a href="index.html#features">Features</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="how-to.html" aria-current="page">How To</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="app-container" id="main">
+      <header class="app-header" style="margin-top:16px">
+        <div class="header-content">
+          <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <h1>How To Use the Song Key & Tempo Analyzer</h1>
+          </div>
+          <p>A quick tutorial to analyze tracks and create a smooth, harmonic mix order.</p>
+        </div>
+      </header>
+
+      <section class="seo-content" aria-labelledby="quick-start-title">
+        <h2 id="quick-start-title">Quick Start</h2>
+        <ol class="feature-list" style="list-style:decimal;margin-left:20px">
+          <li>Open the Analyze section on the home page.</li>
+          <li>Drag and drop your audio files into the drop zone, or click to select files.</li>
+          <li>Watch as each track is analyzed for key (Harmonic Wheel mapping) and BPM.</li>
+          <li>When you have 2+ tracks, click Create Mix to generate the optimal order.</li>
+          <li>Review the sequence and transitions (Perfect Match, Energy Boost, etc.).</li>
+        </ol>
+      </section>
+
+      <section class="seo-content" aria-labelledby="manual-entry-title">
+        <h2 id="manual-entry-title">Manual Entry (No File Upload)</h2>
+        <p>Have a list of songs and want a quick harmonic order without uploading audio? Use the Manual Entry tab on the home page to add tracks with title, artist, key (Harmonic Wheel code like 8B), and BPM. The app will include these in the mix order just like analyzed files.</p>
+      </section>
+
+      <section class="seo-content" aria-labelledby="import-json-title">
+        <h2 id="import-json-title">Import a JSON Song List</h2>
+        <p>If you exported your list earlier, you can import it on the home page's Import Songs tab. The tool loads the songs and generates an optimal sequence from that list.</p>
+      </section>
+
+      <section class="seo-content" aria-labelledby="tips-title">
+        <h2 id="tips-title">Tips for Harmonic Mixing</h2>
+        <ul class="feature-list">
+          <li><i class="fas fa-key"></i> Same-number A/B swaps (e.g., 8A ↔ 8B) are smooth key changes.</li>
+          <li><i class="fas fa-arrows-rotate"></i> Adjacent numbers with same letter (8A → 9A) tend to blend well.</li>
+          <li><i class="fas fa-wave-square"></i> Small BPM differences (±5) often need minimal tempo adjustment.</li>
+          <li><i class="fas fa-bolt"></i> Energy Boost transitions can increase set intensity tastefully.</li>
+        </ul>
+      </section>
+
+      <section class="seo-content" aria-labelledby="who-title">
+        <h2 id="who-title">Who Is It For?</h2>
+        <p>This free song key and BPM analyzer is built for DJs, music producers, and creators who want fast, reliable harmonic mixing insights. Whether you mix live, prepare sets in a DAW, or plan playlists, the Harmonic Wheel and automatic ordering help you achieve smooth, professional transitions.</p>
+      </section>
+
+      <section class="seo-content" aria-labelledby="why-title">
+        <h2 id="why-title">Why We Created This Software</h2>
+        <p>We’re musicians and DJs who couldn’t find a simple, accurate tool to analyze key, detect tempo, and produce a harmonic mix order all in one place. So we built it and released it for free for like‑minded artists. Our mission is to make harmonic mixing accessible with a powerful yet easy-to-use key and BPM analyzer that helps your sets sound their best.</p>
+      </section>
+    </div>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="site-footer-inner">
+        <p>© <span id="year"></span> Song Key & Tempo Analyzer. Built for DJs and music creators.</p>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="index.html#features">Features</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="how-to.html" aria-current="page">How To</a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          var y = new Date().getFullYear();
+          var el = document.getElementById('year');
+          if (el) el.textContent = y;
+        })();
+      </script>
+    </footer>
+  </body>
+  </html>
+

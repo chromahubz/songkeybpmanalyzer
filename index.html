@@ -2,6 +2,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Analyze song key and BPM online. Free Camelot Wheel analyzer and optimal DJ mix sequence generator. Upload audio or add tracks manually to get key, tempo, and harmonic mixing suggestions." />
+    <meta name="keywords" content="song key analyzer,BPM detector,Camelot Wheel,harmonic mixing,DJ tools,tempo detector,music key finder" />
     <title>Song Key & Tempo Analyzer & Mixer</title>
     <link rel="stylesheet" href="styles.css" />
     <link
@@ -12,13 +14,56 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="canonical" href="https://songkeybpmanalyzer.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Song Key & Tempo Analyzer & Mixer" />
+    <meta property="og:description" content="Analyze song key and BPM online. Free Camelot Wheel analyzer and optimal DJ mix sequence generator." />
+    <meta property="og:url" content="https://songkeybpmanalyzer.com/" />
+    <meta property="og:image" content="https://songkeybpmanalyzer.com/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Song Key & Tempo Analyzer & Mixer" />
+    <meta name="twitter:description" content="Analyze song key and BPM online. Free Camelot Wheel analyzer and optimal DJ mix sequence generator." />
+    <meta name="twitter:image" content="https://songkeybpmanalyzer.com/og-image.png" />
+    <meta name="robots" content="index,follow" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Song Key & Tempo Analyzer & Mixer",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Web",
+        "description": "Analyze song key and BPM online using the Camelot Wheel. Generate optimal DJ mix sequences with harmonic mixing tips.",
+        "url": "https://songkeybpmanalyzer.com/",
+        "image": "https://songkeybpmanalyzer.com/og-image.png",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header" role="banner">
+      <div class="site-header-inner">
+        <a class="brand" href="#" aria-label="Song Key & Tempo Analyzer home">
+          <img src="assets/logo.png" alt="Song Key Analyzer logo" class="brand-logo" />
+          <span>Song Key Analyzer</span>
+        </a>
+        <nav class="top-nav" aria-label="Primary">
+          <a href="#analyze">Analyze</a>
+          <a href="#features">Features</a>
+          <a href="#faq">FAQ</a>
+          <a href="how-to.html">How To</a>
+        </nav>
+      </div>
+    </header>
     <div class="app-container">
       <header class="app-header">
         <div class="header-content">
           <div class="logo">
-            <i class="fas fa-music"></i>
+            <img src="assets/logo.png" alt="Song Key Analyzer logo" class="hero-logo" />
             <h1>Song Key & Tempo Analyzer</h1>
           </div>
           <p>
@@ -28,7 +73,8 @@
         </div>
       </header>
 
-      <div class="main-content">
+      <div class="main-content" id="main">
+        <div id="analyze"></div>
         <div class="upload-section">
           <div class="upload-tabs">
             <button class="tab-btn active" id="fileUploadTab">
@@ -48,7 +94,7 @@
           <div class="tab-content active" id="fileUploadContent">
             <div class="drop-zone" id="dropZone">
               <div class="drop-zone-content">
-                <i class="fas fa-cloud-upload-alt upload-icon" id="upload-icon"></i>
+                <img src="assets/uploadicon.png" alt="Upload icon" class="upload-icon" id="upload-icon" />
                 <span style="display: none;" id="loader"></span>
                 <h3>Drop audio files here</h3>
                 <p>Or click to select files</p>
@@ -167,8 +213,8 @@
           <div class="camelot-wheel-container">
             <div class="wheel-header">
               <div class="wheel-title">
-                <i class="fas fa-circle-notch"></i>
-                <h2>Camelot Wheel</h2>
+                <img src="assets/harmonicwheelicon.png" alt="Harmonic Wheel icon" class="icon-inline" />
+                <h2>Harmonic Wheel</h2>
               </div>
               <div class="legend">
                 <span class="legend-item perfect">
@@ -197,7 +243,7 @@
           <div class="songs-panel">
             <div class="songs-header">
               <div class="songs-title">
-                <i class="fas fa-list"></i>
+                <img src="assets/successicon.png" alt="Analyzed songs icon" class="icon-inline" />
                 <h3>Analyzed Songs</h3>
               </div>
               <div class="songs-actions">
@@ -257,8 +303,70 @@
             <!-- Mix sequence will be displayed here -->
           </div>
         </div>
+        <section class="seo-content" id="features" aria-labelledby="features-title">
+          <h2 id="features-title">Key and BPM Analyzer for Harmonic DJ Mixing</h2>
+          <p>
+            Instantly detect song key and tempo with industry-standard Camelot Wheel mapping. Upload audio files or add tracks manually, then auto-generate an
+            optimal, harmonically compatible mix order.
+          </p>
+          <ul class="feature-list">
+            <li><i class="fas fa-key"></i> Accurate key detection with enharmonic mapping</li>
+            <li><i class="fas fa-heartbeat"></i> Reliable BPM estimation for clean transitions</li>
+            <li><i class="fas fa-compact-disc"></i> Camelot Wheel highlighting of compatible keys</li>
+            <li><i class="fas fa-magic"></i> One-click optimal mix sequence generation</li>
+            <li><i class="fas fa-file-export"></i> Export playlist and JSON for your workflow</li>
+          </ul>
+        </section>
+
+        <section class="seo-faq" id="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Frequently Asked Questions</h2>
+          <details>
+            <summary>What is the Harmonic Wheel?</summary>
+            <p>The Harmonic Wheel (also known as the Camelot Wheel) maps musical keys to a circular layout (1A–12A, 1B–12B) that makes harmonic mixing easy. Adjacent keys or same-number A/B swaps usually blend smoothly in a set.</p>
+          </details>
+          <details>
+            <summary>How accurate is the BPM and key detection?</summary>
+            <p>We use state-of-the-art models and established techniques for robust BPM and key estimates. Results are suitable for DJ planning and quick analysis.</p>
+          </details>
+          <details>
+            <summary>Can I export the analyzed audio files?</summary>
+            <p>No. The app does not export audio. It provides the optimal song order for harmonic flow. This is ideal for arranging sets in DAWs (Ableton, Logic, etc.) and for live DJing guidance in your preferred DJ software. You can also get full mixes on our mobile app, <a class="light-link" href="https://www.infiradio.online" target="_blank" rel="noopener">infiradio</a>.</p>
+          </details>
+          <details>
+            <summary>Can I add songs manually without uploading audio?</summary>
+            <p>Yes. Use the Manual Entry tab to quickly add tracks if you already know their key and BPM, or just want to test a set list without files.</p>
+          </details>
+          <details>
+            <summary>Can I import a JSON list of songs?</summary>
+            <p>Yes. Use the Import Songs tab to load a JSON list previously exported by the app. We’ll analyze ordering and generate a mix sequence from that list.</p>
+          </details>
+          <details>
+            <summary>Is this software free?</summary>
+            <p>Yes — absolutely free of charge. Use this free song key and BPM analyzer to plan harmonic mixes anytime.</p>
+          </details>
+        </section>
       </div>
     </div>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="site-footer-inner">
+        <p>
+          © <span id="year"></span> Song Key & Tempo Analyzer. Built for DJs and music creators.
+        </p>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#features">Features</a>
+          <a href="#faq">FAQ</a>
+          <a href="how-to.html">How To</a>
+        </nav>
+      </div>
+      <script>
+        (function(){
+          var y = new Date().getFullYear();
+          var el = document.getElementById('year');
+          if (el) el.textContent = y;
+        })();
+      </script>
+    </footer>
 
     <script type="module" src="app.js"></script>
   </body>

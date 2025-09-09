@@ -14,6 +14,70 @@ body {
     user-select: none;
 }
 
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 8px;
+    padding: 8px 12px;
+    background: #f97316;
+    color: #0a0a0a;
+    border-radius: 6px;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #222;
+}
+
+.site-header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.brand-logo {
+    height: 36px;
+    width: 36px;
+    object-fit: contain;
+}
+
+.top-nav a {
+    color: #a1a1aa;
+    text-decoration: none;
+    margin-left: 16px;
+    transition: color 0.2s ease;
+}
+
+.top-nav a:hover {
+    color: #f97316;
+}
+
 .app-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -41,9 +105,10 @@ body {
     margin-bottom: 16px;
 }
 
-.logo i {
-    font-size: 2.5rem;
-    color: #f97316;
+.logo img.hero-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
 
 .app-header h1 {
@@ -141,8 +206,8 @@ body {
 }
 
 .upload-icon, .import-zone-content i {
-    font-size: 3rem;
-    color: #f97316;
+    width: 144px;
+    height: 144px;
 }
 
 .drop-zone h3, .import-zone h4 {
@@ -309,9 +374,10 @@ body {
     margin-bottom: 20px;
 }
 
-.wheel-title i {
-    font-size: 1.5rem;
-    color: #f97316;
+.icon-inline {
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
 }
 
 .wheel-header h2 {
@@ -743,6 +809,79 @@ body {
     border: 1px solid rgba(249, 115, 22, 0.2);
 }
 
+.seo-content, .seo-faq {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border-radius: 24px;
+    padding: 32px;
+    border: 1px solid #333;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    margin-top: 24px;
+}
+
+.seo-content h2, .seo-faq h2 {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+.feature-list {
+    list-style: none;
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 24px;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ddd;
+}
+
+.seo-faq details {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-top: 12px;
+}
+
+.seo-faq summary {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.seo-faq a.light-link {
+    color: #e5e5e5;
+    text-decoration: underline;
+}
+
+.site-footer {
+    margin-top: 32px;
+    border-top: 1px solid #222;
+    padding: 24px 16px 48px;
+    color: #a1a1aa;
+    background: #0a0a0a;
+}
+
+.site-footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-nav a {
+    color: #a1a1aa;
+    text-decoration: none;
+    margin-left: 16px;
+}
+
+.footer-nav a:hover {
+    color: #f97316;
+}
+
 @media (max-width: 768px) {
     .app-container {
         padding: 16px;
@@ -802,6 +941,14 @@ body {
     
     .songs-actions {
         justify-content: center;
+    }
+
+    .feature-list {
+        grid-template-columns: 1fr;
+    }
+
+    .site-header-inner {
+        padding: 10px 16px;
     }
 }
 
